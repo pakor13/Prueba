@@ -1,0 +1,26 @@
+<h1>Estatica#contacto</h1>
+<p>Find me in app/views/estatica/contacto.html.erb</p>
+
+<%# @notas %>
+<% @notas = Nota.find(:all, :limit => 4, :order => "created_at DESC") %>
+<ul>
+<% @notas.each do |nota| %>
+	<li>
+	<b><%= link_to nota.titulo, nota %> </b> <br />
+	
+	<% if !nota.categoria.blank? %>
+	<%= link_to nota.categoria.titulo, nota.categoria  %> <br />
+	<% end %>
+	
+	<%= nota.contenido.truncate(100, :omission =>"...") %>
+	<b><%= link_to "(Ver más)", nota %>
+	</li>
+	<br />
+<% end %>
+</ul>
+
+<%# if !@notas.blank? %>
+<%# for nota in  @notas %>
+
+<%# end %>
+<%# end %>

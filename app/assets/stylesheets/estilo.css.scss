@@ -1,0 +1,34 @@
+// Place all the styles related to the prueba controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$amarillo: #F5ED64;
+$azul: #199ee9;
+
+#contenedor{
+width: 960px;
+margin: 0;
+border:1px solid $azul;
+}
+
+h1{
+color:$amarillo;
+}
+
+
+#header{
+border-bottom: 10 px solid $azul;
+}
+
+#logo{
+width: 200px;
+height: 150px;
+float: left;
+}
+
+#titulo{
+width: 760px;
+height: 150px;
+float: right;
+}
+
